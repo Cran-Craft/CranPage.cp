@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赤染页 - Cran Page</title>
+    <!-- 网页图标 (Favicon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e53935' d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 17.9c-3.2-.9-5.7-3.7-5.7-7.1 0-4.4 3.6-8 8-8 0 0-.8 1.3-.8 3.6 0 2.2 1.3 3.9 3 5-1 1.2-1.5 2.6-1.5 4.3 0 .9.2 1.7.5 2.4-.1-.1-.2-.2-.3-.2zm7.5-1.8c-1.2 1.5-3 2.4-5 2.4-1.4 0-2.8-.5-3.8-1.4 1-1.6 2.3-3 3.9-3.7 1.3-.6 2.7-1 4.2-1 .6 0 1.2.1 1.8.2-.2 1-.6 2-1.2 2.9z'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+klEQVRYw+2XP0tWURTHP3nFWmKyQWjT0W2xoaUtKqgGJ5f2Nwj9Ba0NQQ5CEBINIjYpDTZIQ5CkRE4hxPuz2HALwdDDMzz3Pp/f8x1873Dvvef8+J7fOed3rgOwoJ2kZOA6cA3oAj7j7wM8iV6VNR84K10BjgMzQH/E/yXwFJgHDlXbjDEjRUrAFDAa8PkMPAEeq3tq7IUCYBL4J3B+XyNZ6h5GAS7R94DPF9Wp5bv6jNlmATwG+gz/t8A94H3Azp8L1wAwAmwCXw2fL4ntW8B6Bfs+NjILQKjTtylA8j5UWeoyC2AYmDdu7vQmvv0aM0jq2YEWQvIYWEoF8AiwppnzFoArRc1xYA44UuF8HvgFbABryXcJ+N0Ar6WZ+X/rgAO4DPw4gg6wH+Ab7F8ZgGJf5SROrQCM5CieB8CGQa8OAXiWo3gagM+GT59BUW7kKJ4G4J3hc8Og2TjUejFF8TQA7w2fRYOmDVrJUTwNgJumfsvy0OhVjs1oA5DRMxu+5iieBkBNb6IjdT71j/TCzgJwA5gzjkaV6NtHwL0cxSsBcBr4UMPVq/JuBz5ViG9S9zApgGvAHWASOFej4HtgBnhX8Jk8TzKX5rwG7Bo+D4HX9U7DP6sh9aYYgFgjAAAAAElFTkSuQmCC">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+klEQVR4AWMYBaOAGgDnIGlM0v8JCljYARq8heFf5BdM5U0M/6NfYDJwZQMUVTdC9MABABz3BmQg1AA2NpA5ywbYGP5bHUPmWYzgPI3sF3A2hBqAw0CEAvx6gC6BGQABQD3oOgAG4gLhPxwDxABxAKifj0gxqCHIYoA0/gtqF2H43wSOUxYG0AAB7A5IJrAzgDo6QP0aDIgxwMQA6mGHJ/5/hv/FEEkWBkSd8B/KswN1LCAFgEkBFKKRl3VgOc+gvtiP61/ECRyuGAKK34Iqxv/+KB4wAFsOACr8B2o7whmB2yWAKuAbKEE+Z4Am9MEBAAANWUqD78o0TQAAAABJRU5ErkJggg==">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+ElEQVR4Ae2Yu0oDQRSG9xXEV1BRtEHSBEFJY6ODGlwInqJUyRMIBosgHgVTsPQJ8lBaXkDRS7Hwjk2CF5RQ+R2YTchmNzuzM3vG88Nh3Znd+ebnzGZn8wC0rKWAG+AXcIPYtQBzKUVYAl6AdHAGtBa9gFGgt3CRd8D7vyGx63dCV1ECbgEX4aTwtDg3tGUBXcBm7n8CmM19JgPb7gbnYChXrgB4lLcgAjYKeZ4Bh23IqwOvAue9ALYLmZ8Ad23IqwNv5PmRvN02clAHeXUN95Z3v1vOu6c8m4R3T3m2lJc3P2/IV6A8+6C8euWdW8y7pzxbyst7JD9lyLOnPJvJ1f5kyO/D0cZnlCfv9r5be3n+deC06vL8CeBNifOO/BNlKXH3l0c78J54L3CLGfxk8n3F4B54p+BvfM7wt4R/e+5eP9z54t6gMci2KHkM+N8a+4H9RflD4hW4pOA3g+8pDQjK0wn4Hq8tyB9oK4tPoD+VG9zBvH9aZQHdWrNw1fL3xDj7grc13j2vvgD9YOMGKOew4hwn4I0FPZUDfEGLA7w3wJZVjSsN8H1/3cBGlv8A7Af4S3g0AJM8+Zp0n5JWGcA6t2X/3ZfVJHgv8CvpDvx7//hL5qsP+ChsBU4AX8ByGV5L8FqC1xK8luC1BK8leC3BawleS/BagtcSvJbgtQSvJXgtwWsJXkvwWoLXEryW4LUEryV4LcFrCV5L8FqC1xK8luC1BK8leC3BawleS/BagtcSvJbgtQSvJXgtwWsJXkvwWoLXErz+e70BdBFsPSXYn8YAAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #e53935;
+            --primary-dark: #c62828;
+            --primary-light: #ff6b6b;
+            --bg-gradient-start: #fff5f5;
+            --bg-gradient-end: #ffeaea;
+            --text-color: #2d3436;
+            --text-light: #636e72;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --card-border: rgba(229, 57, 53, 0.1);
+            --shadow-color: rgba(229, 57, 53, 0.1);
+            --bg-blur: 0px;
+            --bg-brightness: 100%;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            transition: background 0.3s ease;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .custom-bg {
+            position: fixed;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(var(--bg-blur)) brightness(var(--bg-brightness));
+            transition: filter 0.3s ease;
+        }
+        
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 当有背景图片时，渐变背景变为半透明 */
+        body.has-bg-image {
+            background: linear-gradient(135deg, rgba(255, 245, 245, 0.85) 0%, rgba(255, 234, 234, 0.85) 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 头部区域 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-color);
+            line-height: 1;
+        }
+        
+        .logo-subtitle {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+        
+        .date-time {
+            font-size: 18px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        /* 搜索区域 */
+        .search-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .search-title {
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            text-align: center;
+        }
+        
+        .search-title span {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .search-box {
+            width: 100%;
+            max-width: 700px;
+            position: relative;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            border-radius: 50px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .search-box:focus-within {
+            box-shadow: 0 15px 40px var(--shadow-color);
+            transform: translateY(-2px);
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 20px 70px 20px 25px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: var(--text-color);
+        }
+        
+        .search-input::placeholder {
+            color: #b2bec3;
+        }
+        
+        .search-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .search-button:hover {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+        }
+        
+        .search-button i {
+            font-size: 22px;
+        }
+        
+        .search-engines {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .engine-btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 8px 18px;
+            font-size: 14px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .engine-btn:hover, .engine-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: white;
+            transform: translateY(-2px);
+            border-color: transparent;
+        }
+        
+        /* 快速访问区域 */
+        .quick-access {
+            margin-top: 40px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            color: var(--primary-color);
+        }
+        
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+        
+        .site-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--card-border);
+            position: relative;
+        }
+        
+        .site-card:hover {
+            background-color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow-color);
+        }
+        
+        .site-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .site-name {
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        /* 网站编辑按钮 */
+        .site-edit-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+        
+        .site-card:hover .site-edit-btn {
+            opacity: 1;
+        }
+        
+        .site-edit-btn:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: var(--text-color);
+        }
+        
+        /* 添加网站按钮 */
+        .add-site-card {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px dashed var(--card-border);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .add-site-card:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-color: var(--primary-color);
+        }
+        
+        .add-site-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: white;
+        }
+        
+        /* 底部区域 */
+        footer {
+            margin-top: 60px;
+            padding: 20px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .cran-text {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* 主题选择器 */
+        .theme-selector {
+            position: relative;
+        }
+        
+        .theme-btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: var(--primary-color);
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-btn:hover {
+            background-color: white;
+            transform: rotate(30deg);
+        }
+        
+        .theme-panel {
+            position: absolute;
+            top: 55px;
+            right: 0;
+            background-color: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 320px;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .theme-panel.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .theme-panel h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .theme-panel h3 i {
+            color: var(--primary-color);
+        }
+        
+        .panel-section {
+            margin-bottom: 25px;
+        }
+        
+        .panel-section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .color-options {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .color-option {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            border: 3px solid transparent;
+        }
+        
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+        
+        .color-option.active {
+            border-color: white;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .custom-color {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .custom-color label {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        #customColorPicker {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 0;
+            background: transparent;
+        }
+        
+        /* 背景设置 */
+        .bg-upload-area {
+            border: 2px dashed var(--card-border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+        
+        .bg-upload-area:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(229, 57, 53, 0.05);
+        }
+        
+        .bg-upload-area i {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .bg-upload-area p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .bg-upload-area small {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+        
+        .bg-preview {
+            width: 100%;
+            height: 100px;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            position: relative;
+            display: none;
+        }
+        
+        .bg-preview.active {
+            display: block;
+        }
+        
+        .bg-preview-remove {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .bg-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .bg-control {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .bg-control label {
+            font-size: 14px;
+            color: var(--text-color);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .bg-control label span {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .bg-slider {
+            width: 100%;
+            height: 6px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--card-border);
+            border-radius: 3px;
+            outline: none;
+        }
+        
+        .bg-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        .bg-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .bg-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .bg-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .bg-btn:hover {
+            background-color: rgba(229, 57, 53, 0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .bg-btn.primary {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .bg-btn.primary:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* 网站管理模态框 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal {
+            background-color: white;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--text-light);
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        
+        .modal-close:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: var(--text-color);
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            font-size: 16px;
+            color: var(--text-color);
+            background-color: white;
+            transition: all 0.2s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.1);
+        }
+        
+        .color-picker-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .color-picker {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        .icon-selector {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .icon-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            background-color: var(--card-bg);
+            border: 2px solid var(--card-border);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .icon-option:hover, .icon-option.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .modal-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .modal-btn.cancel {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid var(--card-border);
+        }
+        
+        .modal-btn.cancel:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        .modal-btn.save {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .modal-btn.save:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .search-title {
+                font-size: 28px;
+            }
+            
+            .search-input {
+                padding: 18px 60px 18px 20px;
+                font-size: 16px;
+            }
+            
+            .sites-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 15px;
+            }
+            
+            .date-time {
+                font-size: 16px;
+            }
+            
+            .theme-panel {
+                width: 300px;
+                right: -10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .search-title {
+                font-size: 24px;
+            }
+            
+            .search-box {
+                border-radius: 30px;
+            }
+            
+            .sites-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .date-time {
+                align-self: flex-start;
+            }
+            
+            .theme-selector {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .theme-panel {
+                width: calc(100vw - 40px);
+                right: -20px;
+            }
+        }
+        
+        /* 滚动条样式 */
+        .theme-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .theme-panel::-webkit-scrollbar-track {
+            background: var(--card-border);
+            border-radius: 3px;
+        }
+        
+        .theme-panel::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 自定义背景层 -->
+    <div class="custom-bg" id="customBg"></div>
+    <div class="bg-overlay" id="bgOverlay"></div>
+    
+    <!-- 网站管理模态框 -->
+    <div class="modal-overlay" id="siteModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">添加新网站</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="siteForm">
+                    <div class="form-group">
+                        <label class="form-label" for="siteName">网站名称</label>
+                        <input type="text" class="form-input" id="siteName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="siteUrl">网站地址</label>
+                        <input type="url" class="form-input" id="siteUrl" placeholder="https://" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="siteColor">网站颜色</label>
+                        <div class="color-picker-group">
+                            <input type="color" class="color-picker" id="siteColor" value="#e53935">
+                            <input type="text" class="form-input" id="siteColorValue" value="#e53935" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">网站图标</label>
+                        <div class="icon-selector" id="iconSelector">
+                            <!-- 图标选项将通过JavaScript动态添加 -->
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="modal-btn cancel" id="cancelBtn">取消</button>
+                        <button type="submit" class="modal-btn save" id="saveBtn">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- 头部区域 -->
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">赤染页</div>
+                    <div class="logo-subtitle">Cran Page</div>
+                </div>
+            </div>
+            <div class="date-time" id="dateTime">
+                正在加载时间...
+            </div>
+            
+            <!-- 主题选择器 -->
+            <div class="theme-selector">
+                <button class="theme-btn" id="themeBtn">
+                    <i class="fas fa-palette"></i>
+                </button>
+                <div class="theme-panel" id="themePanel">
+                    <h3><i class="fas fa-fill-drip"></i> 主题与背景设置</h3>
+                    
+                    <!-- 颜色主题部分 -->
+                    <div class="panel-section">
+                        <div class="panel-section-title">颜色主题</div>
+                        <div class="color-options" id="colorOptions">
+                            <!-- 颜色选项将通过JavaScript动态添加 -->
+                        </div>
+                        <div class="custom-color">
+                            <label for="customColorPicker">自定义:</label>
+                            <input type="color" id="customColorPicker" value="#e53935">
+                        </div>
+                    </div>
+                    
+                    <!-- 背景设置部分 -->
+                    <div class="panel-section">
+                        <div class="panel-section-title">背景设置</div>
+                        
+                        <!-- 背景预览 -->
+                        <div class="bg-preview" id="bgPreview"></div>
+                        
+                        <!-- 上传区域 -->
+                        <div class="bg-upload-area" id="bgUploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>点击上传背景图片</p>
+                            <small>支持 JPG, PNG, GIF 格式</small>
+                            <input type="file" id="bgFileInput" accept="image/*" style="display: none;">
+                        </div>
+                        
+                        <!-- 背景控制 -->
+                        <div class="bg-controls">
+                            <div class="bg-control">
+                                <label for="bgBlurSlider">
+                                    背景模糊度
+                                    <span id="blurValue">0px</span>
+                                </label>
+                                <input type="range" id="bgBlurSlider" class="bg-slider" min="0" max="20" value="0" step="1">
+                            </div>
+                            
+                            <div class="bg-control">
+                                <label for="bgBrightnessSlider">
+                                    背景亮度
+                                    <span id="brightnessValue">100%</span>
+                                </label>
+                                <input type="range" id="bgBrightnessSlider" class="bg-slider" min="20" max="100" value="100" step="5">
+                            </div>
+                            
+                            <div class="bg-control">
+                                <label for="bgOpacitySlider">
+                                    背景透明度
+                                    <span id="opacityValue">10%</span>
+                                </label>
+                                <input type="range" id="bgOpacitySlider" class="bg-slider" min="0" max="100" value="10" step="5">
+                            </div>
+                            
+                            <div class="bg-buttons">
+                                <button class="bg-btn" id="resetBgBtn">
+                                    <i class="fas fa-undo-alt"></i> 重置背景
+                                </button>
+                                <button class="bg-btn primary" id="saveBgBtn">
+                                    <i class="fas fa-save"></i> 保存设置
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 网站管理部分 -->
+                    <div class="panel-section">
+                        <div class="panel-section-title">网站管理</div>
+                        <div class="bg-buttons">
+                            <button class="bg-btn" id="manageSitesBtn">
+                                <i class="fas fa-edit"></i> 管理网站
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- 搜索区域 -->
+        <section class="search-section">
+            <h1 class="search-title">从<span> 赤染页 </span>开始探索</h1>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索网页、资讯、图片..." autofocus>
+                <button class="search-button" id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="search-engines">
+                <button class="engine-btn active" data-engine="google">Google</button>
+                <button class="engine-btn" data-engine="bing">Bing</button>
+                <button class="engine-btn" data-engine="baidu">百度</button>
+                <button class="engine-btn" data-engine="duckduckgo">DuckDuckGo</button>
+            </div>
+        </section>
+        
+        <!-- 快速访问区域 -->
+        <section class="quick-access">
+            <h2 class="section-title">
+                <i class="fas fa-bolt"></i>
+                快速访问
+            </h2>
+            
+            <div class="sites-grid" id="sitesGrid">
+                <!-- 站点将通过JavaScript动态添加 -->
+            </div>
+        </section>
+        
+        <!-- 底部区域 -->
+        <footer>
+            <div class="copyright">
+                <p><span class="cran-text">赤染页 (Cran Page)</span> | By XTOxygen</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 更新日期和时间
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeElement = document.getElementById('dateTime');
+            
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+            };
+            
+            dateTimeElement.textContent = now.toLocaleDateString('zh-CN', options);
+        }
+        
+        // 初始化时间并设置定时更新
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+        
+        // 搜索引擎配置
+        const searchEngines = {
+            google: "https://www.google.com/search?q=",
+            bing: "https://www.bing.com/search?q=",
+            baidu: "https://www.baidu.com/s?wd=",
+            duckduckgo: "https://duckduckgo.com/?q="
+        };
+        
+        let currentEngine = 'google';
+        
+        // 设置搜索引擎切换
+        const engineButtons = document.querySelectorAll('.engine-btn');
+        engineButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // 移除所有按钮的active类
+                engineButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // 为当前按钮添加active类
+                this.classList.add('active');
+                
+                // 更新当前搜索引擎
+                currentEngine = this.getAttribute('data-engine');
+                
+                // 更新搜索框焦点
+                document.getElementById('searchInput').focus();
+            });
+        });
+        
+        // 处理搜索功能
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        
+        function performSearch() {
+            const query = searchInput.value.trim();
+            if (query) {
+                const searchUrl = searchEngines[currentEngine] + encodeURIComponent(query);
+                window.open(searchUrl, '_blank');
+                searchInput.value = '';
+            }
+        }
+        
+        // 搜索按钮点击事件
+        searchButton.addEventListener('click', performSearch);
+        
+        // 输入框回车键事件
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        // 常用网站数据 - 从本地存储加载或使用默认数据
+        let quickSites = [
+            { name: "Gmail", url: "https://mail.google.com", icon: "fas fa-envelope", color: "#ea4335" },
+            { name: "YouTube", url: "https://www.youtube.com", icon: "fab fa-youtube", color: "#ff0000" },
+            { name: "GitHub", url: "https://github.com", icon: "fab fa-github", color: "#333" },
+            { name: "知乎", url: "https://www.zhihu.com", icon: "fab fa-zhihu", color: "#0084ff" },
+            { name: "Twitter", url: "https://twitter.com", icon: "fab fa-twitter", color: "#1da1f2" },
+            { name: "Notion", url: "https://www.notion.so", icon: "fas fa-sticky-note", color: "#000000" },
+            { name: "地图", url: "https://maps.google.com", icon: "fas fa-map", color: "#34a853" },
+            { name: "日历", url: "https://calendar.google.com", icon: "fas fa-calendar", color: "#4285f4" },
+            { name: "网易云音乐", url: "https://music.163.com", icon: "fas fa-music", color: "#e60026" },
+            { name: "Bilibili", url: "https://www.bilibili.com", icon: "fas fa-play-circle", color: "#fb7299" },
+            { name: "豆瓣", url: "https://www.douban.com", icon: "fas fa-book", color: "#2e963d" },
+            { name: "微信", url: "https://wx.qq.com", icon: "fab fa-weixin", color: "#07c160" }
+        ];
+        
+        // 保存网站到本地存储
+        function saveSitesToStorage() {
+            localStorage.setItem('cranPageSites', JSON.stringify(quickSites));
+        }
+        
+        // 从本地存储加载网站
+        function loadSitesFromStorage() {
+            const savedSites = localStorage.getItem('cranPageSites');
+            if (savedSites) {
+                try {
+                    quickSites = JSON.parse(savedSites);
+                } catch (e) {
+                    console.error("加载网站数据失败", e);
+                }
+            }
+        }
+        
+        // 生成快速访问网站卡片
+        function generateSiteCards() {
+            const sitesGrid = document.getElementById('sitesGrid');
+            sitesGrid.innerHTML = '';
+            
+            // 添加添加网站按钮
+            const addCard = document.createElement('div');
+            addCard.className = 'site-card add-site-card';
+            addCard.id = 'addSiteBtn';
+            
+            addCard.innerHTML = `
+                <div class="add-site-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="site-name">添加网站</div>
+            `;
+            
+            sitesGrid.appendChild(addCard);
+            
+            // 为添加按钮添加事件
+            addCard.addEventListener('click', () => {
+                openSiteModal();
+            });
+            
+            // 添加网站卡片
+            quickSites.forEach((site, index) => {
+                const siteCard = document.createElement('a');
+                siteCard.href = site.url;
+                siteCard.target = '_blank';
+                siteCard.className = 'site-card';
+                siteCard.setAttribute('data-index', index);
+                
+                siteCard.innerHTML = `
+                    <div class="site-icon" style="background-color: ${site.color}">
+                        <i class="${site.icon}"></i>
+                    </div>
+                    <div class="site-name">${site.name}</div>
+                    <button class="site-edit-btn" data-index="${index}">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                `;
+                
+                sitesGrid.appendChild(siteCard);
+            });
+            
+            // 为编辑按钮添加事件
+            document.querySelectorAll('.site-edit-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const index = parseInt(this.getAttribute('data-index'));
+                    openSiteModal(index);
+                });
+            });
+        }
+        
+        // 主题颜色管理
+        const themeBtn = document.getElementById('themeBtn');
+        const themePanel = document.getElementById('themePanel');
+        const customColorPicker = document.getElementById('customColorPicker');
+        const colorOptionsContainer = document.getElementById('colorOptions');
+        
+        // 预设颜色主题
+        const colorThemes = [
+            { name: "赤染红", primary: "#e53935", primaryLight: "#ff6b6b", bgStart: "#fff5f5", bgEnd: "#ffeaea" },
+            { name: "暗夜黑", primary: "#2d3436", primaryLight: "#636e72", bgStart: "#2d3436", bgEnd: "#636e72", textColor: "#dfe6e9" },
+            { name: "青空蓝", primary: "#0984e3", primaryLight: "#74b9ff", bgStart: "#f0f8ff", bgEnd: "#e6f7ff" },
+            { name: "森绿", primary: "#00b894", primaryLight: "#55efc4", bgStart: "#f0fff4", bgEnd: "#e6fff0" },
+            { name: "夕橙", primary: "#e17055", primaryLight: "#fab1a0", bgStart: "#fff5e6", bgEnd: "#ffeedd" },
+            { name: "紫罗兰", primary: "#6c5ce7", primaryLight: "#a29bfe", bgStart: "#f5f7fa", bgEnd: "#e6e9ff" },
+            { name: "樱粉", primary: "#e84393", primaryLight: "#fd79a8", bgStart: "#ffe6f2", bgEnd: "#ffddee" },
+            { name: "深海", primary: "#00cec9", primaryLight: "#81ecec", bgStart: "#e0f7f6", bgEnd: "#d1f2f1" }
+        ];
+        
+        // 创建颜色选项
+        colorThemes.forEach((theme, index) => {
+            const colorOption = document.createElement('div');
+            colorOption.className = 'color-option';
+            colorOption.style.background = `linear-gradient(135deg, ${theme.primary}, ${theme.primaryLight})`;
+            colorOption.setAttribute('data-theme-index', index);
+            colorOption.title = theme.name;
+            
+            // 如果是当前主题，添加选中标记
+            if (index === 0) {
+                colorOption.classList.add('active');
+                colorOption.innerHTML = '<i class="fas fa-check"></i>';
+            }
+            
+            colorOption.addEventListener('click', () => {
+                applyTheme(theme);
+                setActiveColorOption(colorOption);
+                saveThemeToStorage(theme);
+            });
+            
+            colorOptionsContainer.appendChild(colorOption);
+        });
+        
+        // 自定义颜色选择器
+        customColorPicker.addEventListener('input', function() {
+            const customColor = this.value;
+            const customTheme = {
+                name: "自定义",
+                primary: customColor,
+                primaryLight: lightenColor(customColor, 30),
+                bgStart: lightenColor(customColor, 90),
+                bgEnd: lightenColor(customColor, 80)
+            };
+            
+            applyTheme(customTheme);
+            setActiveColorOption(null);
+            saveThemeToStorage(customTheme);
+        });
+        
+        // 应用主题函数 - 修复了阴影颜色更新问题
+        function applyTheme(theme) {
+            document.documentElement.style.setProperty('--primary-color', theme.primary);
+            document.documentElement.style.setProperty('--primary-dark', darkenColor(theme.primary, 20));
+            document.documentElement.style.setProperty('--primary-light', theme.primaryLight || lightenColor(theme.primary, 30));
+            
+            if (theme.bgStart && theme.bgEnd) {
+                document.documentElement.style.setProperty('--bg-gradient-start', theme.bgStart);
+                document.documentElement.style.setProperty('--bg-gradient-end', theme.bgEnd);
+            }
+            
+            if (theme.textColor) {
+                document.documentElement.style.setProperty('--text-color', theme.textColor);
+                document.documentElement.style.setProperty('--text-light', lightenColor(theme.textColor, 40));
+            } else {
+                // 默认文本颜色
+                document.documentElement.style.setProperty('--text-color', '#2d3436');
+                document.documentElement.style.setProperty('--text-light', '#636e72');
+            }
+            
+            // 根据背景颜色调整卡片背景
+            const cardBg = theme.name === "暗夜黑" ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)';
+            const cardBorder = theme.name === "暗夜黑" ? 'rgba(255, 255, 255, 0.2)' : `rgba(${hexToRgb(theme.primary)}, 0.1)`;
+            
+            // 更新阴影颜色 - 这是修复的关键
+            const shadowColor = `rgba(${hexToRgb(theme.primary)}, 0.1)`;
+            
+            document.documentElement.style.setProperty('--card-bg', cardBg);
+            document.documentElement.style.setProperty('--card-border', cardBorder);
+            document.documentElement.style.setProperty('--shadow-color', shadowColor);
+            
+            // 更新自定义颜色选择器的值
+            customColorPicker.value = theme.primary;
+        }
+        
+        // 设置活动的颜色选项
+        function setActiveColorOption(activeOption) {
+            // 移除所有颜色选项的选中状态
+            document.querySelectorAll('.color-option').forEach(option => {
+                option.classList.remove('active');
+                option.innerHTML = '';
+            });
+            
+            // 如果有指定的活动选项，设置其为选中状态
+            if (activeOption) {
+                activeOption.classList.add('active');
+                activeOption.innerHTML = '<i class="fas fa-check"></i>';
+            }
+        }
+        
+        // 颜色辅助函数：加深颜色
+        function darkenColor(color, percent) {
+            const num = parseInt(color.replace("#", ""), 16);
+            const amt = Math.round(2.55 * percent);
+            const R = (num >> 16) - amt;
+            const G = (num >> 8 & 0x00FF) - amt;
+            const B = (num & 0x0000FF) - amt;
+            
+            return "#" + (
+                0x1000000 +
+                (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+                (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+                (B < 255 ? B < 1 ? 0 : B : 255)
+            ).toString(16).slice(1);
+        }
+        
+        // 颜色辅助函数：减淡颜色
+        function lightenColor(color, percent) {
+            const num = parseInt(color.replace("#", ""), 16);
+            const amt = Math.round(2.55 * percent);
+            const R = (num >> 16) + amt;
+            const G = (num >> 8 & 0x00FF) + amt;
+            const B = (num & 0x0000FF) + amt;
+            
+            return "#" + (
+                0x1000000 +
+                (R > 255 ? 255 : R) * 0x10000 +
+                (G > 255 ? 255 : G) * 0x100 +
+                (B > 255 ? 255 : B)
+            ).toString(16).slice(1);
+        }
+        
+        // 将十六进制颜色转换为RGB值
+        function hexToRgb(hex) {
+            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? 
+                `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` 
+                : "229, 57, 53";
+        }
+        
+        // 保存主题到本地存储
+        function saveThemeToStorage(theme) {
+            localStorage.setItem('cranPageTheme', JSON.stringify(theme));
+        }
+        
+        // 从本地存储加载主题
+        function loadThemeFromStorage() {
+            const savedTheme = localStorage.getItem('cranPageTheme');
+            if (savedTheme) {
+                try {
+                    const theme = JSON.parse(savedTheme);
+                    applyTheme(theme);
+                    
+                    // 更新颜色选项的选中状态
+                    if (theme.name !== "自定义") {
+                        const index = colorThemes.findIndex(t => t.name === theme.name);
+                        if (index !== -1) {
+                            const colorOption = document.querySelector(`.color-option[data-theme-index="${index}"]`);
+                            if (colorOption) {
+                                setActiveColorOption(colorOption);
+                            }
+                        }
+                    } else {
+                        setActiveColorOption(null);
+                    }
+                    
+                    // 更新自定义颜色选择器
+                    customColorPicker.value = theme.primary;
+                } catch (e) {
+                    console.error("加载主题失败", e);
+                }
+            }
+        }
+        
+        // 主题面板显示/隐藏
+        themeBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            themePanel.classList.toggle('active');
+        });
+        
+        // 点击页面其他地方关闭主题面板
+        document.addEventListener('click', function() {
+            if (themePanel.classList.contains('active')) {
+                themePanel.classList.remove('active');
+            }
+        });
+        
+        // 阻止主题面板内的点击事件冒泡
+        themePanel.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // 背景设置功能
+        const bgUploadArea = document.getElementById('bgUploadArea');
+        const bgFileInput = document.getElementById('bgFileInput');
+        const bgPreview = document.getElementById('bgPreview');
+        const customBg = document.getElementById('customBg');
+        const bgOverlay = document.getElementById('bgOverlay');
+        const bgBlurSlider = document.getElementById('bgBlurSlider');
+        const bgBrightnessSlider = document.getElementById('bgBrightnessSlider');
+        const bgOpacitySlider = document.getElementById('bgOpacitySlider');
+        const blurValue = document.getElementById('blurValue');
+        const brightnessValue = document.getElementById('brightnessValue');
+        const opacityValue = document.getElementById('opacityValue');
+        const resetBgBtn = document.getElementById('resetBgBtn');
+        const saveBgBtn = document.getElementById('saveBgBtn');
+        
+        // 当前背景设置
+        let currentBgSettings = {
+            image: null,
+            blur: 0,
+            brightness: 100,
+            opacity: 10
+        };
+        
+        // 加载保存的背景设置
+        function loadBackgroundSettings() {
+            const savedBg = localStorage.getItem('cranPageBackground');
+            if (savedBg) {
+                try {
+                    const settings = JSON.parse(savedBg);
+                    currentBgSettings = settings;
+                    
+                    // 应用背景设置
+                    if (settings.image) {
+                        customBg.style.backgroundImage = `url(${settings.image})`;
+                        bgPreview.style.backgroundImage = `url(${settings.image})`;
+                        bgPreview.classList.add('active');
+                        document.body.classList.add('has-bg-image');
+                    }
+                    
+                    // 应用模糊度、亮度和透明度
+                    document.documentElement.style.setProperty('--bg-blur', `${settings.blur}px`);
+                    document.documentElement.style.setProperty('--bg-brightness', `${settings.brightness}%`);
+                    
+                    customBg.style.filter = `blur(${settings.blur}px) brightness(${settings.brightness}%)`;
+                    bgOverlay.style.backgroundColor = `rgba(0, 0, 0, ${settings.opacity / 100})`;
+                    
+                    // 更新滑块值
+                    bgBlurSlider.value = settings.blur;
+                    bgBrightnessSlider.value = settings.brightness;
+                    bgOpacitySlider.value = settings.opacity;
+                    
+                    blurValue.textContent = `${settings.blur}px`;
+                    brightnessValue.textContent = `${settings.brightness}%`;
+                    opacityValue.textContent = `${settings.opacity}%`;
+                    
+                } catch (e) {
+                    console.error("加载背景设置失败", e);
+                }
+            }
+        }
+        
+        // 保存背景设置
+        function saveBackgroundSettings() {
+            localStorage.setItem('cranPageBackground', JSON.stringify(currentBgSettings));
+            showNotification('背景设置已保存');
+        }
+        
+        // 显示通知
+        function showNotification(message) {
+            // 创建通知元素
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--primary-color);
+                color: white;
+                padding: 12px 24px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                z-index: 1000;
+                transform: translateX(150%);
+                transition: transform 0.3s ease;
+                font-size: 14px;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // 显示通知
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 10);
+            
+            // 3秒后隐藏并移除通知
+            setTimeout(() => {
+                notification.style.transform = 'translateX(150%)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+        
+        // 点击上传区域触发文件选择
+        bgUploadArea.addEventListener('click', () => {
+            bgFileInput.click();
+        });
+        
+        // 处理文件选择
+        bgFileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            // 检查文件类型
+            if (!file.type.match('image.*')) {
+                showNotification('请选择图片文件');
+                return;
+            }
+            
+            // 检查文件大小（限制为5MB）
+            if (file.size > 5 * 1024 * 1024) {
+                showNotification('图片大小不能超过5MB');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageUrl = event.target.result;
+                
+                // 更新背景
+                customBg.style.backgroundImage = `url(${imageUrl})`;
+                bgPreview.style.backgroundImage = `url(${imageUrl})`;
+                bgPreview.classList.add('active');
+                document.body.classList.add('has-bg-image');
+                
+                // 保存到当前设置
+                currentBgSettings.image = imageUrl;
+            };
+            reader.readAsDataURL(file);
+        });
+        
+        // 移除背景图片
+        bgPreview.addEventListener('click', function(e) {
+            if (e.target.classList.contains('bg-preview-remove')) {
+                // 移除背景
+                customBg.style.backgroundImage = '';
+                bgPreview.classList.remove('active');
+                bgPreview.style.backgroundImage = '';
+                document.body.classList.remove('has-bg-image');
+                
+                // 更新当前设置
+                currentBgSettings.image = null;
+            }
+        });
+        
+        // 添加移除按钮到预览
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'bg-preview-remove';
+        removeBtn.innerHTML = '<i class="fas fa-times"></i>';
+        bgPreview.appendChild(removeBtn);
+        
+        // 模糊度滑块
+        bgBlurSlider.addEventListener('input', function() {
+            const blurValue = this.value;
+            document.documentElement.style.setProperty('--bg-blur', `${blurValue}px`);
+            customBg.style.filter = `blur(${blurValue}px) brightness(${currentBgSettings.brightness}%)`;
+            
+            // 更新显示值
+            document.getElementById('blurValue').textContent = `${blurValue}px`;
+            
+            // 更新当前设置
+            currentBgSettings.blur = parseInt(blurValue);
+        });
+        
+        // 亮度滑块
+        bgBrightnessSlider.addEventListener('input', function() {
+            const brightnessValue = this.value;
+            document.documentElement.style.setProperty('--bg-brightness', `${brightnessValue}%`);
+            customBg.style.filter = `blur(${currentBgSettings.blur}px) brightness(${brightnessValue}%)`;
+            
+            // 更新显示值
+            document.getElementById('brightnessValue').textContent = `${brightnessValue}%`;
+            
+            // 更新当前设置
+            currentBgSettings.brightness = parseInt(brightnessValue);
+        });
+        
+        // 透明度滑块
+        bgOpacitySlider.addEventListener('input', function() {
+            const opacityValue = this.value;
+            bgOverlay.style.backgroundColor = `rgba(0, 0, 0, ${opacityValue / 100})`;
+            
+            // 更新显示值
+            document.getElementById('opacityValue').textContent = `${opacityValue}%`;
+            
+            // 更新当前设置
+            currentBgSettings.opacity = parseInt(opacityValue);
+        });
+        
+        // 重置背景按钮
+        resetBgBtn.addEventListener('click', function() {
+            // 重置背景
+            customBg.style.backgroundImage = '';
+            customBg.style.filter = 'blur(0px) brightness(100%)';
+            bgOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+            
+            // 重置预览
+            bgPreview.classList.remove('active');
+            bgPreview.style.backgroundImage = '';
+            document.body.classList.remove('has-bg-image');
+            
+            // 重置滑块
+            bgBlurSlider.value = 0;
+            bgBrightnessSlider.value = 100;
+            bgOpacitySlider.value = 10;
+            
+            blurValue.textContent = '0px';
+            brightnessValue.textContent = '100%';
+            opacityValue.textContent = '10%';
+            
+            // 重置CSS变量
+            document.documentElement.style.setProperty('--bg-blur', '0px');
+            document.documentElement.style.setProperty('--bg-brightness', '100%');
+            
+            // 更新当前设置
+            currentBgSettings = {
+                image: null,
+                blur: 0,
+                brightness: 100,
+                opacity: 10
+            };
+            
+            showNotification('背景已重置');
+        });
+        
+        // 保存背景设置按钮
+        saveBgBtn.addEventListener('click', saveBackgroundSettings);
+        
+        // 网站管理功能
+        const siteModal = document.getElementById('siteModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalClose = document.getElementById('modalClose');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const siteForm = document.getElementById('siteForm');
+        const siteNameInput = document.getElementById('siteName');
+        const siteUrlInput = document.getElementById('siteUrl');
+        const siteColorInput = document.getElementById('siteColor');
+        const siteColorValue = document.getElementById('siteColorValue');
+        const iconSelector = document.getElementById('iconSelector');
+        const saveBtn = document.getElementById('saveBtn');
+        const manageSitesBtn = document.getElementById('manageSitesBtn');
+        
+        // 网站图标选项
+        const iconOptions = [
+            'fas fa-globe', 'fas fa-envelope', 'fas fa-music', 'fas fa-video',
+            'fas fa-gamepad', 'fas fa-shopping-cart', 'fas fa-newspaper',
+            'fas fa-calendar', 'fas fa-map', 'fas fa-cloud', 'fas fa-book',
+            'fas fa-camera', 'fas fa-film', 'fas fa-tv', 'fas fa-headphones',
+            'fas fa-podcast', 'fas fa-rss', 'fab fa-youtube', 'fab fa-twitter',
+            'fab fa-facebook', 'fab fa-instagram', 'fab fa-linkedin',
+            'fab fa-github', 'fab fa-whatsapp', 'fab fa-telegram',
+            'fab fa-discord', 'fab fa-reddit', 'fab fa-tiktok', 'fab fa-spotify',
+            'fab fa-dropbox', 'fab fa-google-drive', 'fas fa-photo-video'
+        ];
+        
+        let editingSiteIndex = null;
+        
+        // 生成图标选项
+        function generateIconOptions() {
+            iconSelector.innerHTML = '';
+            iconOptions.forEach(icon => {
+                const iconOption = document.createElement('div');
+                iconOption.className = 'icon-option';
+                iconOption.innerHTML = `<i class="${icon}"></i>`;
+                iconOption.setAttribute('data-icon', icon);
+                
+                iconOption.addEventListener('click', function() {
+                    // 移除所有图标选项的选中状态
+                    document.querySelectorAll('.icon-option').forEach(option => {
+                        option.classList.remove('active');
+                    });
+                    
+                    // 为当前图标选项添加选中状态
+                    this.classList.add('active');
+                });
+                
+                iconSelector.appendChild(iconOption);
+            });
+            
+            // 默认选中第一个图标
+            if (iconSelector.firstChild) {
+                iconSelector.firstChild.classList.add('active');
+            }
+        }
+        
+        // 打开网站管理模态框
+        function openSiteModal(index = null) {
+            editingSiteIndex = index;
+            
+            if (index === null) {
+                // 添加新网站
+                modalTitle.textContent = '添加新网站';
+                siteNameInput.value = '';
+                siteUrlInput.value = '';
+                siteColorInput.value = '#e53935';
+                siteColorValue.value = '#e53935';
+                
+                // 重置图标选择
+                document.querySelectorAll('.icon-option').forEach(option => {
+                    option.classList.remove('active');
+                });
+                if (iconSelector.firstChild) {
+                    iconSelector.firstChild.classList.add('active');
+                }
+            } else {
+                // 编辑现有网站
+                modalTitle.textContent = '编辑网站';
+                const site = quickSites[index];
+                siteNameInput.value = site.name;
+                siteUrlInput.value = site.url;
+                siteColorInput.value = site.color;
+                siteColorValue.value = site.color;
+                
+                // 设置图标选择
+                document.querySelectorAll('.icon-option').forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('data-icon') === site.icon) {
+                        option.classList.add('active');
+                    }
+                });
+            }
+            
+            siteModal.classList.add('active');
+        }
+        
+        // 关闭网站管理模态框
+        function closeSiteModal() {
+            siteModal.classList.remove('active');
+            editingSiteIndex = null;
+        }
+        
+        // 颜色选择器同步
+        siteColorInput.addEventListener('input', function() {
+            siteColorValue.value = this.value;
+        });
+        
+        siteColorValue.addEventListener('input', function() {
+            siteColorInput.value = this.value;
+        });
+        
+        // 处理表单提交
+        siteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 获取表单数据
+            const name = siteNameInput.value.trim();
+            const url = siteUrlInput.value.trim();
+            const color = siteColorInput.value;
+            
+            // 获取选中的图标
+            const selectedIcon = document.querySelector('.icon-option.active');
+            const icon = selectedIcon ? selectedIcon.getAttribute('data-icon') : 'fas fa-globe';
+            
+            // 验证数据
+            if (!name || !url) {
+                showNotification('请填写网站名称和地址');
+                return;
+            }
+            
+            if (!url.startsWith('http')) {
+                showNotification('请输入有效的网址（以 http:// 或 https:// 开头）');
+                return;
+            }
+            
+            if (editingSiteIndex === null) {
+                // 添加新网站
+                quickSites.push({ name, url, icon, color });
+            } else {
+                // 更新现有网站
+                quickSites[editingSiteIndex] = { name, url, icon, color };
+            }
+            
+            // 保存到本地存储
+            saveSitesToStorage();
+            
+            // 重新生成网站卡片
+            generateSiteCards();
+            
+            // 关闭模态框
+            closeSiteModal();
+            
+            // 显示通知
+            showNotification(editingSiteIndex === null ? '网站已添加' : '网站已更新');
+        });
+        
+        // 管理网站按钮事件
+        manageSitesBtn.addEventListener('click', function() {
+            // 关闭主题面板
+            themePanel.classList.remove('active');
+            
+            // 打开网站管理模态框
+            openSiteModal();
+        });
+        
+        // 关闭模态框事件
+        modalClose.addEventListener('click', closeSiteModal);
+        cancelBtn.addEventListener('click', closeSiteModal);
+        
+        // 点击模态框外部关闭
+        siteModal.addEventListener('click', function(e) {
+            if (e.target === siteModal) {
+                closeSiteModal();
+            }
+        });
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为搜索框添加自动聚焦
+            searchInput.focus();
+            
+            // 加载保存的主题
+            loadThemeFromStorage();
+            
+            // 加载保存的背景设置
+            loadBackgroundSettings();
+            
+            // 加载保存的网站数据
+            loadSitesFromStorage();
+            
+            // 生成网站卡片
+            generateSiteCards();
+            
+            // 生成图标选项
+            generateIconOptions();
+        });
+    </script>
+</body>
+</html>
